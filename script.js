@@ -1,6 +1,7 @@
 const wrapper = document.getElementById("tiles");
 
 const createGrid = () => {
+  console.log("on");
   wrapper.innerHTML = "";
   let columns = Math.floor(document.body.clientWidth / 50);
   let rows = Math.floor(document.body.clientHeight / 50);
@@ -50,5 +51,7 @@ const createGrid = () => {
 };
 
 createGrid();
+
+document.onload = () => createGrid();
 
 window.onresize = () => createGrid();
